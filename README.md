@@ -1,6 +1,6 @@
 # 3DCvT: A Lip Reading Method Based on 3D Convolutional Vision Transformer
 
-An unofficial PyTorch reproduction of the paper [A Lip Reading Method Based on 3D Convolutional Vision Transformer](https://ieeexplore.ieee.org/document/9834167). Supports both **LRW** (English, 500 words) and **LRW-1000** (Chinese benchmark, full vocabulary size: 1184 classes).
+An unofficial PyTorch reproduction of the paper [A Lip Reading Method Based on 3D Convolutional Vision Transformer](https://ieeexplore.ieee.org/document/9837012). Supports both **LRW** (English, 500 words) and **LRW-1000** (Chinese benchmark, full vocabulary size: 1184 classes).
 
 ## Architecture
 
