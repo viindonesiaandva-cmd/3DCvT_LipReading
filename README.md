@@ -37,7 +37,6 @@ Key techniques: Word Boundary Trick (512 -> 513 dim via binary boundary indicato
 
 `experiments/` can be kept in the repository for directory structure, logs, and curves. Checkpoint `.pth` files are still ignored by default.
 
-This repository releases code only. LRW / LRW-1000 datasets, pretrained checkpoints, and the original paper PDF are subject to their own licenses or access terms and should not be redistributed unless you have the right to do so.
 
 ## Installation
 
@@ -297,6 +296,14 @@ Completed local runs that are safe to quote:
 | --- | --- | --- |
 | LRW | Validation Top-1 Accuracy | 83.91% | 
 | LRW-1000 | Validation Top-1 Accuracy | 55.29% | 
+
+## Hugging Face Weights
+
+Pretrained weights and release artifacts are published on Hugging Face:
+
+- **LRW model repo**: https://huggingface.co/RaikkonenWu/3dcvt-lrw
+
+The source code remains in this GitHub repository, while model files (for example `best_model.pth`, release README, and checksums) are hosted on Hugging Face.
 
 ## Gradient Accumulation
 
