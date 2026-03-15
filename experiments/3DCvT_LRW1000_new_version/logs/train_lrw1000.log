@@ -1,0 +1,531 @@
+2026-03-07 13:27:30,519 - DDP Initialized. World Size: 1
+2026-03-07 13:27:30,519 - Config: {
+  "dataset": "lrw1000",
+  "data_root": "/ssd2/3DCvT_data/data_LRW1000",
+  "exp_name": "3DCvT_LRW1000_new_version",
+  "batch_size": 32,
+  "epochs": 120,
+  "lr": 0.0006,
+  "num_workers": 8,
+  "num_classes": 1184,
+  "resume": null,
+  "warmup_epochs": 5,
+  "accum_steps": 4
+}
+2026-03-07 13:27:30,520 - Effective batch size: 32 x 1 GPUs x 4 accum = 128
+2026-03-07 13:27:30,520 - Initializing Datasets (lrw1000)...
+2026-03-07 13:27:30,522 - Initialized LRW1000Dataset [train]. Found 1184 classes.
+2026-03-07 13:27:32,860 - Loaded 603193 samples for split 'train'.
+2026-03-07 13:27:32,860 - Initialized LRW1000Dataset [val]. Found 1184 classes.
+2026-03-07 13:27:33,039 - Loaded 63237 samples for split 'val'.
+2026-03-07 13:27:34,735 - Reverted SyncBN → BatchNorm in Stage 3 blocks (checkpoint compatibility).
+2026-03-07 13:27:34,808 - Start DDP Training...
+2026-03-07 13:29:10,789 - DDP Initialized. World Size: 1
+2026-03-07 13:29:10,790 - Config: {
+  "dataset": "lrw1000",
+  "data_root": "/ssd2/3DCvT_data/data_LRW1000",
+  "exp_name": "3DCvT_LRW1000_new_version",
+  "batch_size": 64,
+  "epochs": 120,
+  "lr": 0.0006,
+  "num_workers": 8,
+  "num_classes": 1184,
+  "resume": null,
+  "warmup_epochs": 5,
+  "accum_steps": 4
+}
+2026-03-07 13:29:10,790 - Effective batch size: 64 x 1 GPUs x 4 accum = 256
+2026-03-07 13:29:10,790 - Initializing Datasets (lrw1000)...
+2026-03-07 13:29:10,791 - Initialized LRW1000Dataset [train]. Found 1184 classes.
+2026-03-07 13:29:13,078 - Loaded 603193 samples for split 'train'.
+2026-03-07 13:29:13,079 - Initialized LRW1000Dataset [val]. Found 1184 classes.
+2026-03-07 13:29:13,245 - Loaded 63237 samples for split 'val'.
+2026-03-07 13:29:14,873 - Reverted SyncBN → BatchNorm in Stage 3 blocks (checkpoint compatibility).
+2026-03-07 13:29:14,902 - Start DDP Training...
+2026-03-07 13:30:03,949 - Experiment Started: 3DCvT_LRW1000_new_version
+2026-03-07 13:30:03,949 - Config: {
+  "dataset": "lrw1000",
+  "data_root": "/ssd2/3DCvT_data/data_LRW1000",
+  "exp_name": "3DCvT_LRW1000_new_version",
+  "batch_size": 64,
+  "epochs": 120,
+  "lr": 0.0006,
+  "num_workers": 8,
+  "num_classes": 1184,
+  "gpu": "0",
+  "resume": "",
+  "warmup_epochs": 5,
+  "accum_steps": 4
+}
+2026-03-07 13:30:03,949 - Effective batch size: 64 x 4 accum = 256
+2026-03-07 13:30:03,949 - Initializing Datasets (lrw1000)...
+2026-03-07 13:30:03,949 - Initialized LRW1000Dataset [train]. Found 1184 classes.
+2026-03-07 13:30:06,188 - Loaded 603193 samples for split 'train'.
+2026-03-07 13:30:06,188 - Initialized LRW1000Dataset [val]. Found 1184 classes.
+2026-03-07 13:30:06,346 - Loaded 63237 samples for split 'val'.
+2026-03-07 13:30:06,347 - Building Model...
+2026-03-07 13:30:10,713 - Start Training...
+2026-03-07 13:31:11,274 - Experiment Started: 3DCvT_LRW1000_new_version
+2026-03-07 13:31:11,274 - Config: {
+  "dataset": "lrw1000",
+  "data_root": "/ssd2/3DCvT_data/data_LRW1000",
+  "exp_name": "3DCvT_LRW1000_new_version",
+  "batch_size": 64,
+  "epochs": 120,
+  "lr": 0.0006,
+  "num_workers": 8,
+  "num_classes": 1184,
+  "gpu": "0",
+  "resume": "",
+  "warmup_epochs": 5,
+  "accum_steps": 4
+}
+2026-03-07 13:31:11,274 - Effective batch size: 64 x 4 accum = 256
+2026-03-07 13:31:11,274 - Initializing Datasets (lrw1000)...
+2026-03-07 13:31:11,274 - Initialized LRW1000Dataset [train]. Found 1184 classes.
+2026-03-07 13:31:20,545 - Experiment Started: 3DCvT_LRW1000_new_version
+2026-03-07 13:31:20,545 - Config: {
+  "dataset": "lrw1000",
+  "data_root": "/ssd2/3DCvT_data/data_LRW1000",
+  "exp_name": "3DCvT_LRW1000_new_version",
+  "batch_size": 64,
+  "epochs": 120,
+  "lr": 0.0006,
+  "num_workers": 8,
+  "num_classes": 1184,
+  "gpu": "0",
+  "resume": "",
+  "warmup_epochs": 5,
+  "accum_steps": 4
+}
+2026-03-07 13:31:20,545 - Effective batch size: 64 x 4 accum = 256
+2026-03-07 13:31:20,545 - Initializing Datasets (lrw1000)...
+2026-03-07 13:31:20,545 - Initialized LRW1000Dataset [train]. Found 1184 classes.
+2026-03-07 13:31:22,844 - Loaded 603193 samples for split 'train'.
+2026-03-07 13:31:22,844 - Initialized LRW1000Dataset [val]. Found 1184 classes.
+2026-03-07 13:31:23,008 - Loaded 63237 samples for split 'val'.
+2026-03-07 13:31:23,009 - Building Model...
+2026-03-07 13:31:25,648 - Start Training...
+2026-03-07 13:33:35,145 - Experiment Started: 3DCvT_LRW1000_new_version
+2026-03-07 13:33:35,145 - Config: {
+  "dataset": "lrw1000",
+  "data_root": "/ssd2/3DCvT_data/data_LRW1000",
+  "exp_name": "3DCvT_LRW1000_new_version",
+  "batch_size": 64,
+  "epochs": 120,
+  "lr": 0.0006,
+  "num_workers": 8,
+  "num_classes": 1184,
+  "gpu": "1",
+  "resume": "",
+  "warmup_epochs": 5,
+  "accum_steps": 4
+}
+2026-03-07 13:33:35,145 - Effective batch size: 64 x 4 accum = 256
+2026-03-07 13:33:35,145 - Initializing Datasets (lrw1000)...
+2026-03-07 13:33:35,145 - Initialized LRW1000Dataset [train]. Found 1184 classes.
+2026-03-07 13:33:37,497 - Loaded 603193 samples for split 'train'.
+2026-03-07 13:33:37,498 - Initialized LRW1000Dataset [val]. Found 1184 classes.
+2026-03-07 13:33:37,662 - Loaded 63237 samples for split 'val'.
+2026-03-07 13:33:37,663 - Building Model...
+2026-03-07 13:33:40,535 - Start Training...
+2026-03-07 13:36:54,798 - Experiment Started: 3DCvT_LRW1000_new_version
+2026-03-07 13:36:54,798 - Config: {
+  "dataset": "lrw1000",
+  "data_root": "/ssd2/3DCvT_data/data_LRW1000",
+  "exp_name": "3DCvT_LRW1000_new_version",
+  "batch_size": 128,
+  "epochs": 120,
+  "lr": 0.0006,
+  "num_workers": 8,
+  "num_classes": 1184,
+  "gpu": "1",
+  "resume": "",
+  "warmup_epochs": 5,
+  "accum_steps": 2
+}
+2026-03-07 13:36:54,798 - Effective batch size: 128 x 2 accum = 256
+2026-03-07 13:36:54,798 - Initializing Datasets (lrw1000)...
+2026-03-07 13:36:54,799 - Initialized LRW1000Dataset [train]. Found 1184 classes.
+2026-03-07 13:36:57,090 - Loaded 603193 samples for split 'train'.
+2026-03-07 13:36:57,090 - Initialized LRW1000Dataset [val]. Found 1184 classes.
+2026-03-07 13:36:57,250 - Loaded 63237 samples for split 'val'.
+2026-03-07 13:36:57,251 - Building Model...
+2026-03-07 13:37:00,242 - Start Training...
+2026-03-07 13:47:33,750 - Experiment Started: 3DCvT_LRW1000_new_version
+2026-03-07 13:47:33,751 - Config: {
+  "dataset": "lrw1000",
+  "data_root": "/ssd2/3DCvT_data/data_LRW1000",
+  "exp_name": "3DCvT_LRW1000_new_version",
+  "batch_size": 128,
+  "epochs": 120,
+  "lr": 0.0006,
+  "num_workers": 8,
+  "num_classes": 1184,
+  "gpu": "1",
+  "resume": "",
+  "warmup_epochs": 5,
+  "accum_steps": 2
+}
+2026-03-07 13:47:33,751 - Effective batch size: 128 x 2 accum = 256
+2026-03-07 13:47:33,751 - Initializing Datasets (lrw1000)...
+2026-03-07 13:47:33,751 - Initialized LRW1000Dataset [train]. Found 1184 classes.
+2026-03-07 13:47:35,967 - Loaded 603193 samples for split 'train'.
+2026-03-07 13:47:35,968 - Initialized LRW1000Dataset [val]. Found 1184 classes.
+2026-03-07 13:47:36,125 - Loaded 63237 samples for split 'val'.
+2026-03-07 13:47:36,126 - Building Model...
+2026-03-07 13:47:38,905 - Start Training...
+2026-03-07 14:39:10,115 - Epoch [1/120] Completed in 3091s | ETA: 4 days, 6:10:53
+2026-03-07 14:39:10,116 - Train Loss: 6.1146 | Val Loss: 6.1266 | Val Acc: 8.96%
+2026-03-07 14:39:14,138 - New Best Accuracy: 8.96% - Saving Model...
+2026-03-07 15:26:58,724 - Epoch [2/120] Completed in 2863s | ETA: 3 days, 21:52:18
+2026-03-07 15:26:58,724 - Train Loss: 5.5959 | Val Loss: 4.7110 | Val Acc: 20.13%
+2026-03-07 15:27:04,810 - New Best Accuracy: 20.13% - Saving Model...
+2026-03-07 16:14:43,682 - Epoch [3/120] Completed in 2854s | ETA: 3 days, 20:46:22
+2026-03-07 16:14:43,692 - Train Loss: 5.0246 | Val Loss: 4.1261 | Val Acc: 29.50%
+2026-03-07 16:14:47,546 - New Best Accuracy: 29.50% - Saving Model...
+2026-03-07 17:02:10,337 - Epoch [4/120] Completed in 2839s | ETA: 3 days, 19:30:06
+2026-03-07 17:02:10,445 - Train Loss: 4.7857 | Val Loss: 4.0181 | Val Acc: 31.03%
+2026-03-07 17:02:14,727 - New Best Accuracy: 31.03% - Saving Model...
+2026-03-07 17:49:00,047 - Epoch [5/120] Completed in 2802s | ETA: 3 days, 17:32:23
+2026-03-07 17:49:00,078 - Train Loss: 4.6874 | Val Loss: 3.9716 | Val Acc: 32.33%
+2026-03-07 17:49:03,689 - New Best Accuracy: 32.33% - Saving Model...
+2026-03-07 18:35:30,091 - Epoch [6/120] Completed in 2784s | ETA: 3 days, 16:10:05
+2026-03-07 18:35:30,102 - Train Loss: 4.6389 | Val Loss: 4.0567 | Val Acc: 30.94%
+2026-03-07 19:21:43,990 - Epoch [7/120] Completed in 2771s | ETA: 3 days, 14:58:51
+2026-03-07 19:21:44,042 - Train Loss: 4.5574 | Val Loss: 3.8917 | Val Acc: 33.41%
+2026-03-07 19:21:47,962 - New Best Accuracy: 33.41% - Saving Model...
+2026-03-07 20:07:59,380 - Epoch [8/120] Completed in 2768s | ETA: 3 days, 14:08:14
+2026-03-07 20:07:59,436 - Train Loss: 4.4765 | Val Loss: 3.8285 | Val Acc: 35.18%
+2026-03-07 20:08:02,930 - New Best Accuracy: 35.18% - Saving Model...
+2026-03-07 20:54:09,507 - Epoch [9/120] Completed in 2763s | ETA: 3 days, 13:13:10
+2026-03-07 20:54:09,591 - Train Loss: 4.4423 | Val Loss: 3.7680 | Val Acc: 36.24%
+2026-03-07 20:54:13,711 - New Best Accuracy: 36.24% - Saving Model...
+2026-03-07 21:40:16,305 - Epoch [10/120] Completed in 2760s | ETA: 3 days, 12:20:29
+2026-03-07 21:40:16,315 - Train Loss: 4.3743 | Val Loss: 3.7331 | Val Acc: 36.27%
+2026-03-07 21:40:19,393 - New Best Accuracy: 36.27% - Saving Model...
+2026-03-07 22:26:22,878 - Epoch [11/120] Completed in 2760s | ETA: 3 days, 11:34:01
+2026-03-07 22:26:22,890 - Train Loss: 4.3717 | Val Loss: 3.7375 | Val Acc: 37.03%
+2026-03-07 22:26:26,071 - New Best Accuracy: 37.03% - Saving Model...
+2026-03-07 23:12:19,349 - Epoch [12/120] Completed in 2750s | ETA: 3 days, 10:31:28
+2026-03-07 23:12:19,441 - Train Loss: 4.3413 | Val Loss: 3.6906 | Val Acc: 37.47%
+2026-03-07 23:12:25,000 - New Best Accuracy: 37.47% - Saving Model...
+2026-03-07 23:58:27,461 - Epoch [13/120] Completed in 2759s | ETA: 3 days, 10:01:34
+2026-03-07 23:58:27,515 - Train Loss: 4.3101 | Val Loss: 3.7782 | Val Acc: 36.47%
+2026-03-08 00:44:28,522 - Epoch [14/120] Completed in 2757s | ETA: 3 days, 9:10:58
+2026-03-08 00:44:28,725 - Train Loss: 4.2773 | Val Loss: 3.6685 | Val Acc: 38.19%
+2026-03-08 00:44:33,851 - New Best Accuracy: 38.19% - Saving Model...
+2026-03-08 01:30:36,273 - Epoch [15/120] Completed in 2759s | ETA: 3 days, 8:29:25
+2026-03-08 01:30:36,303 - Train Loss: 4.2530 | Val Loss: 3.6649 | Val Acc: 38.32%
+2026-03-08 01:30:39,781 - New Best Accuracy: 38.32% - Saving Model...
+2026-03-08 02:16:39,537 - Epoch [16/120] Completed in 2756s | ETA: 3 days, 7:38:33
+2026-03-08 02:16:39,724 - Train Loss: 4.2342 | Val Loss: 3.6691 | Val Acc: 38.20%
+2026-03-08 03:02:44,783 - Epoch [17/120] Completed in 2760s | ETA: 3 days, 6:58:13
+2026-03-08 03:02:44,820 - Train Loss: 4.2250 | Val Loss: 3.6091 | Val Acc: 38.71%
+2026-03-08 03:02:48,281 - New Best Accuracy: 38.71% - Saving Model...
+2026-03-08 03:48:49,500 - Epoch [18/120] Completed in 2758s | ETA: 3 days, 6:09:05
+2026-03-08 03:48:49,604 - Train Loss: 4.2004 | Val Loss: 3.6267 | Val Acc: 38.32%
+2026-03-08 04:34:53,259 - Epoch [19/120] Completed in 2758s | ETA: 3 days, 5:24:01
+2026-03-08 04:34:53,328 - Train Loss: 4.2055 | Val Loss: 3.6411 | Val Acc: 38.70%
+2026-03-08 05:20:55,701 - Epoch [20/120] Completed in 2758s | ETA: 3 days, 4:37:34
+2026-03-08 05:20:55,803 - Train Loss: 4.1628 | Val Loss: 3.6491 | Val Acc: 38.05%
+2026-03-08 06:06:58,019 - Epoch [21/120] Completed in 2756s | ETA: 3 days, 3:48:48
+2026-03-08 06:06:58,103 - Train Loss: 4.1641 | Val Loss: 3.6765 | Val Acc: 37.76%
+2026-03-08 06:53:03,234 - Epoch [22/120] Completed in 2759s | ETA: 3 days, 3:07:52
+2026-03-08 06:53:03,255 - Train Loss: 4.1442 | Val Loss: 3.5592 | Val Acc: 39.63%
+2026-03-08 06:53:06,593 - New Best Accuracy: 39.63% - Saving Model...
+2026-03-08 07:39:07,865 - Epoch [23/120] Completed in 2758s | ETA: 3 days, 2:19:29
+2026-03-08 07:39:08,096 - Train Loss: 4.1409 | Val Loss: 3.6482 | Val Acc: 38.85%
+2026-03-08 08:25:13,002 - Epoch [24/120] Completed in 2758s | ETA: 3 days, 1:33:37
+2026-03-08 08:25:13,019 - Train Loss: 4.1133 | Val Loss: 3.6647 | Val Acc: 38.52%
+2026-03-08 09:11:12,667 - Epoch [25/120] Completed in 2756s | ETA: 3 days, 0:43:47
+2026-03-08 09:11:12,878 - Train Loss: 4.0990 | Val Loss: 3.6565 | Val Acc: 38.09%
+2026-03-08 09:57:19,987 - Epoch [26/120] Completed in 2760s | ETA: 3 days, 0:05:19
+2026-03-08 09:57:19,988 - Train Loss: 4.1216 | Val Loss: 3.6347 | Val Acc: 37.98%
+2026-03-08 22:32:37,854 - Experiment Started: 3DCvT_LRW1000_new_version
+2026-03-08 22:32:37,869 - Config: {
+  "dataset": "lrw1000",
+  "data_root": "/ssd2/3DCvT_data/data_LRW1000",
+  "exp_name": "3DCvT_LRW1000_new_version",
+  "batch_size": 128,
+  "epochs": 120,
+  "lr": 0.0006,
+  "num_workers": 8,
+  "num_classes": 1184,
+  "gpu": "1",
+  "resume": "",
+  "warmup_epochs": 5,
+  "accum_steps": 2,
+  "use_compile": false
+}
+2026-03-08 22:32:37,869 - Effective batch size: 128 x 2 accum = 256
+2026-03-08 22:32:37,869 - torch.compile: disabled (recommended for stability on RTX 20xx / checkpointing).
+2026-03-08 22:32:37,869 - Initializing Datasets (lrw1000)...
+2026-03-08 22:32:37,872 - Initialized LRW1000Dataset [train]. Found 1184 classes.
+2026-03-08 22:32:41,605 - Loaded 603193 samples for split 'train'.
+2026-03-08 22:32:41,606 - Initialized LRW1000Dataset [val]. Found 1184 classes.
+2026-03-08 22:32:41,981 - Loaded 63237 samples for split 'val'.
+2026-03-08 22:32:41,982 - Building Model...
+2026-03-08 22:32:45,660 - Start Training...
+2026-03-08 23:32:25,334 - Epoch [1/120] Completed in 3579s | ETA: 4 days, 22:19:41
+2026-03-08 23:32:25,395 - Train Loss: 6.1139 | Val Loss: 6.1373 | Val Acc: 8.96%
+2026-03-08 23:32:31,004 - New Best Accuracy: 8.96% - Saving Model...
+2026-03-09 00:31:25,158 - Epoch [2/120] Completed in 3531s | ETA: 4 days, 19:45:44
+2026-03-09 00:31:25,175 - Train Loss: 5.4274 | Val Loss: 4.0172 | Val Acc: 30.90%
+2026-03-09 00:31:27,994 - New Best Accuracy: 30.90% - Saving Model...
+2026-03-09 01:30:14,477 - Epoch [3/120] Completed in 3523s | ETA: 4 days, 18:31:22
+2026-03-09 01:30:14,555 - Train Loss: 4.5912 | Val Loss: 3.5136 | Val Acc: 39.33%
+2026-03-09 01:30:18,307 - New Best Accuracy: 39.33% - Saving Model...
+2026-03-09 02:28:43,353 - Epoch [4/120] Completed in 3502s | ETA: 4 days, 16:51:38
+2026-03-09 02:28:43,362 - Train Loss: 4.3607 | Val Loss: 3.4661 | Val Acc: 41.29%
+2026-03-09 02:28:46,182 - New Best Accuracy: 41.29% - Saving Model...
+2026-03-09 03:26:32,731 - Epoch [5/120] Completed in 3464s | ETA: 4 days, 14:39:44
+2026-03-09 03:26:32,805 - Train Loss: 4.2389 | Val Loss: 3.3259 | Val Acc: 43.45%
+2026-03-09 03:26:36,034 - New Best Accuracy: 43.45% - Saving Model...
+2026-03-09 04:24:01,406 - Epoch [6/120] Completed in 3443s | ETA: 4 days, 13:02:34
+2026-03-09 04:24:01,422 - Train Loss: 4.2117 | Val Loss: 3.3535 | Val Acc: 42.81%
+2026-03-09 05:21:20,464 - Epoch [7/120] Completed in 3436s | ETA: 4 days, 11:51:49
+2026-03-09 05:21:20,534 - Train Loss: 4.1278 | Val Loss: 3.2863 | Val Acc: 44.59%
+2026-03-09 05:21:23,967 - New Best Accuracy: 44.59% - Saving Model...
+2026-03-09 06:18:37,252 - Epoch [8/120] Completed in 3431s | ETA: 4 days, 10:44:55
+2026-03-09 06:18:37,262 - Train Loss: 4.0589 | Val Loss: 3.2972 | Val Acc: 44.68%
+2026-03-09 06:18:40,013 - New Best Accuracy: 44.68% - Saving Model...
+2026-03-09 07:15:49,174 - Epoch [9/120] Completed in 3427s | ETA: 4 days, 9:40:27
+2026-03-09 07:15:49,186 - Train Loss: 4.0015 | Val Loss: 3.2348 | Val Acc: 46.27%
+2026-03-09 07:15:51,838 - New Best Accuracy: 46.27% - Saving Model...
+2026-03-09 08:12:59,866 - Epoch [10/120] Completed in 3426s | ETA: 4 days, 8:41:11
+2026-03-09 08:12:59,938 - Train Loss: 3.9943 | Val Loss: 3.2154 | Val Acc: 46.89%
+2026-03-09 08:13:03,177 - New Best Accuracy: 46.89% - Saving Model...
+2026-03-09 09:10:11,694 - Epoch [11/120] Completed in 3424s | ETA: 4 days, 7:41:29
+2026-03-09 09:10:11,706 - Train Loss: 3.9392 | Val Loss: 3.2110 | Val Acc: 46.43%
+2026-03-09 10:07:18,028 - Epoch [12/120] Completed in 3423s | ETA: 4 days, 6:42:48
+2026-03-09 10:07:18,088 - Train Loss: 3.8925 | Val Loss: 3.1698 | Val Acc: 47.07%
+2026-03-09 10:07:21,390 - New Best Accuracy: 47.07% - Saving Model...
+2026-03-09 11:04:32,703 - Epoch [13/120] Completed in 3429s | ETA: 4 days, 5:55:54
+2026-03-09 11:04:32,718 - Train Loss: 3.8839 | Val Loss: 3.0736 | Val Acc: 48.91%
+2026-03-09 11:04:35,708 - New Best Accuracy: 48.91% - Saving Model...
+2026-03-09 12:01:38,239 - Epoch [14/120] Completed in 3420s | ETA: 4 days, 4:42:11
+2026-03-09 12:01:38,263 - Train Loss: 3.8637 | Val Loss: 3.1596 | Val Acc: 47.45%
+2026-03-09 12:58:42,245 - Epoch [15/120] Completed in 3420s | ETA: 4 days, 3:45:19
+2026-03-09 12:58:42,280 - Train Loss: 3.8370 | Val Loss: 3.1210 | Val Acc: 48.25%
+2026-03-09 13:55:48,145 - Epoch [16/120] Completed in 3422s | ETA: 4 days, 2:52:46
+2026-03-09 13:55:48,170 - Train Loss: 3.8118 | Val Loss: 3.1930 | Val Acc: 47.71%
+2026-03-09 14:52:52,972 - Epoch [17/120] Completed in 3421s | ETA: 4 days, 1:53:49
+2026-03-09 14:52:53,002 - Train Loss: 3.8038 | Val Loss: 3.0847 | Val Acc: 48.88%
+2026-03-09 15:49:57,051 - Epoch [18/120] Completed in 3421s | ETA: 4 days, 0:56:13
+2026-03-09 15:49:57,120 - Train Loss: 3.7720 | Val Loss: 3.2661 | Val Acc: 46.02%
+2026-03-09 16:47:02,991 - Epoch [19/120] Completed in 3422s | ETA: 4 days, 0:00:39
+2026-03-09 16:47:02,992 - Train Loss: 3.7863 | Val Loss: 3.2192 | Val Acc: 47.61%
+2026-03-09 17:44:08,478 - Epoch [20/120] Completed in 3422s | ETA: 3 days, 23:04:05
+2026-03-09 17:44:08,518 - Train Loss: 3.7505 | Val Loss: 3.1052 | Val Acc: 48.69%
+2026-03-09 18:41:14,096 - Epoch [21/120] Completed in 3420s | ETA: 3 days, 22:03:21
+2026-03-09 18:41:14,097 - Train Loss: 3.7487 | Val Loss: 3.0824 | Val Acc: 48.92%
+2026-03-09 18:41:16,873 - New Best Accuracy: 48.92% - Saving Model...
+2026-03-09 19:38:19,749 - Epoch [22/120] Completed in 3420s | ETA: 3 days, 21:06:56
+2026-03-09 19:38:19,769 - Train Loss: 3.7165 | Val Loss: 3.0937 | Val Acc: 49.24%
+2026-03-09 19:38:23,069 - New Best Accuracy: 49.24% - Saving Model...
+2026-03-09 20:35:25,989 - Epoch [23/120] Completed in 3421s | ETA: 3 days, 20:10:37
+2026-03-09 20:35:26,004 - Train Loss: 3.6894 | Val Loss: 3.0880 | Val Acc: 49.57%
+2026-03-09 20:35:28,812 - New Best Accuracy: 49.57% - Saving Model...
+2026-03-09 21:32:31,072 - Epoch [24/120] Completed in 3420s | ETA: 3 days, 19:12:26
+2026-03-09 21:32:31,072 - Train Loss: 3.7187 | Val Loss: 3.1269 | Val Acc: 49.02%
+2026-03-09 22:29:31,780 - Epoch [25/120] Completed in 3417s | ETA: 3 days, 18:11:27
+2026-03-09 22:29:31,781 - Train Loss: 3.7046 | Val Loss: 3.0835 | Val Acc: 49.52%
+2026-03-09 23:26:32,000 - Epoch [26/120] Completed in 3417s | ETA: 3 days, 17:13:33
+2026-03-09 23:26:32,000 - Train Loss: 3.6909 | Val Loss: 3.1447 | Val Acc: 48.62%
+2026-03-10 00:23:32,038 - Epoch [27/120] Completed in 3417s | ETA: 3 days, 16:16:58
+2026-03-10 00:23:32,057 - Train Loss: 3.6706 | Val Loss: 3.1064 | Val Acc: 48.84%
+2026-03-10 01:20:32,598 - Epoch [28/120] Completed in 3417s | ETA: 3 days, 15:20:27
+2026-03-10 01:20:32,666 - Train Loss: 3.6742 | Val Loss: 3.1448 | Val Acc: 47.85%
+2026-03-10 02:17:32,773 - Epoch [29/120] Completed in 3416s | ETA: 3 days, 14:21:46
+2026-03-10 02:17:32,805 - Train Loss: 3.6609 | Val Loss: 3.0539 | Val Acc: 49.69%
+2026-03-10 02:17:36,397 - New Best Accuracy: 49.69% - Saving Model...
+2026-03-10 03:14:35,293 - Epoch [30/120] Completed in 3416s | ETA: 3 days, 13:25:25
+2026-03-10 03:14:35,324 - Train Loss: 3.6600 | Val Loss: 3.1844 | Val Acc: 47.82%
+2026-03-10 04:11:33,759 - Epoch [31/120] Completed in 3414s | ETA: 3 days, 12:24:56
+2026-03-10 04:11:33,787 - Train Loss: 3.6417 | Val Loss: 3.1153 | Val Acc: 48.84%
+2026-03-10 05:08:33,230 - Epoch [32/120] Completed in 3416s | ETA: 3 days, 11:31:12
+2026-03-10 05:08:33,270 - Train Loss: 3.6493 | Val Loss: 3.0403 | Val Acc: 51.52%
+2026-03-10 05:08:36,814 - New Best Accuracy: 51.52% - Saving Model...
+2026-03-10 06:05:36,057 - Epoch [33/120] Completed in 3417s | ETA: 3 days, 10:34:53
+2026-03-10 06:05:36,082 - Train Loss: 3.6447 | Val Loss: 3.0588 | Val Acc: 50.09%
+2026-03-10 07:02:34,945 - Epoch [34/120] Completed in 3416s | ETA: 3 days, 9:36:42
+2026-03-10 07:02:34,971 - Train Loss: 3.6049 | Val Loss: 3.0544 | Val Acc: 50.60%
+2026-03-10 07:59:32,809 - Epoch [35/120] Completed in 3415s | ETA: 3 days, 8:38:16
+2026-03-10 07:59:32,828 - Train Loss: 3.6051 | Val Loss: 3.0683 | Val Acc: 50.15%
+2026-03-10 08:56:33,215 - Epoch [36/120] Completed in 3417s | ETA: 3 days, 7:44:21
+2026-03-10 08:56:33,273 - Train Loss: 3.6166 | Val Loss: 3.1145 | Val Acc: 49.42%
+2026-03-10 09:53:32,804 - Epoch [37/120] Completed in 3416s | ETA: 3 days, 6:45:42
+2026-03-10 09:53:32,836 - Train Loss: 3.5847 | Val Loss: 3.0647 | Val Acc: 50.04%
+2026-03-10 10:50:33,474 - Epoch [38/120] Completed in 3417s | ETA: 3 days, 5:51:05
+2026-03-10 10:50:33,485 - Train Loss: 3.5824 | Val Loss: 3.0365 | Val Acc: 51.10%
+2026-03-10 11:47:33,181 - Epoch [39/120] Completed in 3416s | ETA: 3 days, 4:52:25
+2026-03-10 11:47:33,199 - Train Loss: 3.5661 | Val Loss: 3.0442 | Val Acc: 50.47%
+2026-03-10 12:44:33,661 - Epoch [40/120] Completed in 3417s | ETA: 3 days, 3:56:35
+2026-03-10 12:44:33,661 - Train Loss: 3.5500 | Val Loss: 3.0243 | Val Acc: 50.68%
+2026-03-10 13:41:34,307 - Epoch [41/120] Completed in 3417s | ETA: 3 days, 2:59:20
+2026-03-10 13:41:34,320 - Train Loss: 3.5551 | Val Loss: 3.0164 | Val Acc: 51.17%
+2026-03-10 14:38:34,255 - Epoch [42/120] Completed in 3417s | ETA: 3 days, 2:02:23
+2026-03-10 14:38:34,282 - Train Loss: 3.5651 | Val Loss: 3.0644 | Val Acc: 50.71%
+2026-03-10 15:35:33,191 - Epoch [43/120] Completed in 3415s | ETA: 3 days, 1:03:17
+2026-03-10 15:35:33,212 - Train Loss: 3.5391 | Val Loss: 3.1033 | Val Acc: 50.31%
+2026-03-10 16:32:33,743 - Epoch [44/120] Completed in 3417s | ETA: 3 days, 0:09:00
+2026-03-10 16:32:33,744 - Train Loss: 3.5286 | Val Loss: 3.0567 | Val Acc: 50.88%
+2026-03-10 17:29:32,973 - Epoch [45/120] Completed in 3416s | ETA: 2 days, 23:10:33
+2026-03-10 17:29:32,996 - Train Loss: 3.4986 | Val Loss: 2.9846 | Val Acc: 51.51%
+2026-03-10 18:26:32,980 - Epoch [46/120] Completed in 3417s | ETA: 2 days, 22:14:49
+2026-03-10 18:26:33,015 - Train Loss: 3.5029 | Val Loss: 2.9726 | Val Acc: 52.56%
+2026-03-10 18:26:36,453 - New Best Accuracy: 52.56% - Saving Model...
+2026-03-10 19:23:36,323 - Epoch [47/120] Completed in 3417s | ETA: 2 days, 21:18:28
+2026-03-10 19:23:36,323 - Train Loss: 3.5171 | Val Loss: 3.0521 | Val Acc: 50.82%
+2026-03-10 20:20:36,070 - Epoch [48/120] Completed in 3417s | ETA: 2 days, 20:20:41
+2026-03-10 20:20:36,084 - Train Loss: 3.4932 | Val Loss: 2.9845 | Val Acc: 51.35%
+2026-03-10 21:17:36,907 - Epoch [49/120] Completed in 3418s | ETA: 2 days, 19:24:50
+2026-03-10 21:17:36,926 - Train Loss: 3.4877 | Val Loss: 2.9769 | Val Acc: 51.83%
+2026-03-10 22:14:40,225 - Epoch [50/120] Completed in 3419s | ETA: 2 days, 18:29:47
+2026-03-10 22:14:40,248 - Train Loss: 3.5020 | Val Loss: 2.9528 | Val Acc: 51.98%
+2026-03-10 23:11:41,697 - Epoch [51/120] Completed in 3417s | ETA: 2 days, 17:30:34
+2026-03-10 23:11:41,735 - Train Loss: 3.4634 | Val Loss: 3.0204 | Val Acc: 51.70%
+2026-03-11 00:08:41,867 - Epoch [52/120] Completed in 3417s | ETA: 2 days, 16:33:14
+2026-03-11 00:08:41,868 - Train Loss: 3.4536 | Val Loss: 3.0020 | Val Acc: 52.00%
+2026-03-11 01:05:41,837 - Epoch [53/120] Completed in 3417s | ETA: 2 days, 15:35:55
+2026-03-11 01:05:41,902 - Train Loss: 3.4476 | Val Loss: 2.9410 | Val Acc: 52.33%
+2026-03-11 02:02:43,245 - Epoch [54/120] Completed in 3417s | ETA: 2 days, 14:39:16
+2026-03-11 02:02:43,285 - Train Loss: 3.4324 | Val Loss: 3.0272 | Val Acc: 51.13%
+2026-03-11 02:59:42,827 - Epoch [55/120] Completed in 3416s | ETA: 2 days, 13:41:29
+2026-03-11 02:59:42,863 - Train Loss: 3.3916 | Val Loss: 2.9085 | Val Acc: 53.14%
+2026-03-11 02:59:45,589 - New Best Accuracy: 53.14% - Saving Model...
+2026-03-11 03:56:45,360 - Epoch [56/120] Completed in 3417s | ETA: 2 days, 12:45:34
+2026-03-11 03:56:45,433 - Train Loss: 3.3916 | Val Loss: 3.0134 | Val Acc: 51.60%
+2026-03-11 04:53:46,207 - Epoch [57/120] Completed in 3417s | ETA: 2 days, 11:48:02
+2026-03-11 04:53:46,218 - Train Loss: 3.4111 | Val Loss: 2.9538 | Val Acc: 53.22%
+2026-03-11 04:53:48,946 - New Best Accuracy: 53.22% - Saving Model...
+2026-03-11 05:50:49,239 - Epoch [58/120] Completed in 3418s | ETA: 2 days, 10:52:18
+2026-03-11 05:50:49,273 - Train Loss: 3.3877 | Val Loss: 2.9946 | Val Acc: 52.16%
+2026-03-11 06:47:49,578 - Epoch [59/120] Completed in 3417s | ETA: 2 days, 9:54:37
+2026-03-11 06:47:49,658 - Train Loss: 3.3948 | Val Loss: 2.9766 | Val Acc: 51.99%
+2026-03-11 07:44:51,653 - Epoch [60/120] Completed in 3418s | ETA: 2 days, 8:58:23
+2026-03-11 07:44:51,653 - Train Loss: 3.3584 | Val Loss: 2.9990 | Val Acc: 52.17%
+2026-03-11 08:41:51,977 - Epoch [61/120] Completed in 3416s | ETA: 2 days, 7:59:58
+2026-03-11 08:41:51,995 - Train Loss: 3.3452 | Val Loss: 3.0195 | Val Acc: 52.12%
+2026-03-11 09:38:51,789 - Epoch [62/120] Completed in 3417s | ETA: 2 days, 7:03:18
+2026-03-11 09:38:51,840 - Train Loss: 3.3557 | Val Loss: 2.9761 | Val Acc: 52.32%
+2026-03-11 10:35:54,447 - Epoch [63/120] Completed in 3419s | ETA: 2 days, 6:08:19
+2026-03-11 10:35:54,449 - Train Loss: 3.3435 | Val Loss: 2.9746 | Val Acc: 52.17%
+2026-03-11 11:32:55,904 - Epoch [64/120] Completed in 3418s | ETA: 2 days, 5:10:08
+2026-03-11 11:32:55,919 - Train Loss: 3.3323 | Val Loss: 2.8906 | Val Acc: 54.45%
+2026-03-11 11:32:58,516 - New Best Accuracy: 54.45% - Saving Model...
+2026-03-11 12:29:57,530 - Epoch [65/120] Completed in 3417s | ETA: 2 days, 4:12:19
+2026-03-11 12:29:57,564 - Train Loss: 3.3051 | Val Loss: 2.9389 | Val Acc: 52.97%
+2026-03-11 13:26:57,857 - Epoch [66/120] Completed in 3417s | ETA: 2 days, 3:15:39
+2026-03-11 13:26:57,885 - Train Loss: 3.3266 | Val Loss: 2.9435 | Val Acc: 53.28%
+2026-03-11 14:23:59,820 - Epoch [67/120] Completed in 3418s | ETA: 2 days, 2:19:29
+2026-03-11 14:23:59,838 - Train Loss: 3.3100 | Val Loss: 2.9391 | Val Acc: 53.18%
+2026-03-11 15:21:00,492 - Epoch [68/120] Completed in 3417s | ETA: 2 days, 1:22:11
+2026-03-11 15:21:00,508 - Train Loss: 3.2992 | Val Loss: 2.9802 | Val Acc: 52.63%
+2026-03-11 16:18:00,018 - Epoch [69/120] Completed in 3416s | ETA: 2 days, 0:24:22
+2026-03-11 16:18:00,049 - Train Loss: 3.2812 | Val Loss: 2.9288 | Val Acc: 53.80%
+2026-03-11 17:15:02,113 - Epoch [70/120] Completed in 3418s | ETA: 1 day, 23:28:34
+2026-03-11 17:15:02,134 - Train Loss: 3.2531 | Val Loss: 2.9283 | Val Acc: 53.59%
+2026-03-11 18:12:01,397 - Epoch [71/120] Completed in 3415s | ETA: 1 day, 22:29:34
+2026-03-11 18:12:01,412 - Train Loss: 3.2429 | Val Loss: 2.9469 | Val Acc: 53.38%
+2026-03-11 19:09:01,503 - Epoch [72/120] Completed in 3417s | ETA: 1 day, 21:33:55
+2026-03-11 19:09:01,504 - Train Loss: 3.2276 | Val Loss: 2.9341 | Val Acc: 53.63%
+2026-03-11 20:06:00,430 - Epoch [73/120] Completed in 3415s | ETA: 1 day, 20:35:47
+2026-03-11 20:06:00,452 - Train Loss: 3.2019 | Val Loss: 2.9732 | Val Acc: 52.92%
+2026-03-11 21:03:02,527 - Epoch [74/120] Completed in 3418s | ETA: 1 day, 19:40:58
+2026-03-11 21:03:02,564 - Train Loss: 3.2033 | Val Loss: 2.9466 | Val Acc: 53.85%
+2026-03-11 22:00:04,961 - Epoch [75/120] Completed in 3419s | ETA: 1 day, 18:44:50
+2026-03-11 22:00:04,988 - Train Loss: 3.1955 | Val Loss: 2.9510 | Val Acc: 53.36%
+2026-03-11 22:57:09,110 - Epoch [76/120] Completed in 3420s | ETA: 1 day, 17:48:05
+2026-03-11 22:57:09,163 - Train Loss: 3.1709 | Val Loss: 2.9584 | Val Acc: 53.66%
+2026-03-11 23:54:09,474 - Epoch [77/120] Completed in 3416s | ETA: 1 day, 16:48:33
+2026-03-11 23:54:09,499 - Train Loss: 3.1468 | Val Loss: 2.9283 | Val Acc: 53.23%
+2026-03-12 00:51:09,678 - Epoch [78/120] Completed in 3417s | ETA: 1 day, 15:52:04
+2026-03-12 00:51:09,753 - Train Loss: 3.1605 | Val Loss: 2.9281 | Val Acc: 54.23%
+2026-03-12 01:48:08,810 - Epoch [79/120] Completed in 3416s | ETA: 1 day, 14:54:33
+2026-03-12 01:48:08,867 - Train Loss: 3.1382 | Val Loss: 3.0009 | Val Acc: 53.39%
+2026-03-12 02:45:10,047 - Epoch [80/120] Completed in 3417s | ETA: 1 day, 13:58:24
+2026-03-12 02:45:10,098 - Train Loss: 3.1162 | Val Loss: 2.8582 | Val Acc: 55.29%
+2026-03-12 02:45:12,996 - New Best Accuracy: 55.29% - Saving Model...
+2026-03-12 03:42:12,700 - Epoch [81/120] Completed in 3416s | ETA: 1 day, 13:00:57
+2026-03-12 03:42:12,729 - Train Loss: 3.1166 | Val Loss: 2.8631 | Val Acc: 54.96%
+2026-03-12 04:39:12,432 - Epoch [82/120] Completed in 3416s | ETA: 1 day, 12:04:03
+2026-03-12 04:39:12,484 - Train Loss: 3.1219 | Val Loss: 2.8845 | Val Acc: 54.78%
+2026-03-12 05:36:13,325 - Epoch [83/120] Completed in 3417s | ETA: 1 day, 11:07:27
+2026-03-12 05:36:13,413 - Train Loss: 3.0760 | Val Loss: 2.8952 | Val Acc: 54.93%
+2026-03-12 06:33:15,118 - Epoch [84/120] Completed in 3418s | ETA: 1 day, 10:11:01
+2026-03-12 06:33:15,146 - Train Loss: 3.0368 | Val Loss: 2.9457 | Val Acc: 54.25%
+2026-03-12 07:30:15,888 - Epoch [85/120] Completed in 3418s | ETA: 1 day, 9:14:09
+2026-03-12 07:30:15,889 - Train Loss: 3.0282 | Val Loss: 2.9537 | Val Acc: 54.24%
+2026-03-12 08:27:17,143 - Epoch [86/120] Completed in 3418s | ETA: 1 day, 8:17:07
+2026-03-12 08:27:17,163 - Train Loss: 3.0183 | Val Loss: 2.9113 | Val Acc: 54.73%
+2026-03-12 09:24:17,005 - Epoch [87/120] Completed in 3416s | ETA: 1 day, 7:19:17
+2026-03-12 09:24:17,018 - Train Loss: 2.9892 | Val Loss: 2.8974 | Val Acc: 54.99%
+2026-03-12 10:21:16,226 - Epoch [88/120] Completed in 3416s | ETA: 1 day, 6:22:12
+2026-03-12 10:21:16,226 - Train Loss: 2.9792 | Val Loss: 2.9543 | Val Acc: 54.20%
+2026-03-12 11:18:16,834 - Epoch [89/120] Completed in 3417s | ETA: 1 day, 5:25:51
+2026-03-12 11:18:16,848 - Train Loss: 2.9922 | Val Loss: 2.9240 | Val Acc: 54.68%
+2026-03-12 12:15:17,715 - Epoch [90/120] Completed in 3417s | ETA: 1 day, 4:28:52
+2026-03-12 12:15:17,756 - Train Loss: 2.9638 | Val Loss: 2.9329 | Val Acc: 54.40%
+2026-03-12 13:12:18,928 - Epoch [91/120] Completed in 3417s | ETA: 1 day, 3:31:56
+2026-03-12 13:12:18,942 - Train Loss: 2.9373 | Val Loss: 2.9200 | Val Acc: 54.56%
+2026-03-12 14:09:20,329 - Epoch [92/120] Completed in 3418s | ETA: 1 day, 2:35:14
+2026-03-12 14:09:20,384 - Train Loss: 2.9286 | Val Loss: 2.9743 | Val Acc: 54.36%
+2026-03-12 15:06:22,116 - Epoch [93/120] Completed in 3418s | ETA: 1 day, 1:38:24
+2026-03-12 15:06:22,156 - Train Loss: 2.9222 | Val Loss: 2.9585 | Val Acc: 53.95%
+2026-03-12 16:03:23,159 - Epoch [94/120] Completed in 3417s | ETA: 1 day, 0:40:59
+2026-03-12 16:03:23,172 - Train Loss: 2.9204 | Val Loss: 2.9674 | Val Acc: 54.20%
+2026-03-12 17:00:23,635 - Epoch [95/120] Completed in 3417s | ETA: 23:44:05
+2026-03-12 17:00:23,648 - Train Loss: 2.8748 | Val Loss: 2.9301 | Val Acc: 54.60%
+2026-03-12 17:57:23,681 - Epoch [96/120] Completed in 3417s | ETA: 22:46:51
+2026-03-12 17:57:23,736 - Train Loss: 2.8965 | Val Loss: 2.9597 | Val Acc: 54.27%
+2026-03-12 18:54:23,853 - Epoch [97/120] Completed in 3416s | ETA: 21:49:49
+2026-03-12 18:54:23,872 - Train Loss: 2.8752 | Val Loss: 2.9376 | Val Acc: 54.51%
+2026-03-12 19:51:23,769 - Epoch [98/120] Completed in 3417s | ETA: 20:53:00
+2026-03-12 19:51:23,769 - Train Loss: 2.8899 | Val Loss: 2.9197 | Val Acc: 55.02%
+2026-03-12 20:48:22,338 - Epoch [99/120] Completed in 3415s | ETA: 19:55:35
+2026-03-12 20:48:22,338 - Train Loss: 2.8395 | Val Loss: 2.9611 | Val Acc: 54.53%
+2026-03-12 21:45:24,378 - Epoch [100/120] Completed in 3419s | ETA: 18:59:43
+2026-03-12 21:45:24,379 - Train Loss: 2.8442 | Val Loss: 2.9590 | Val Acc: 54.56%
+2026-03-12 22:42:27,399 - Epoch [101/120] Completed in 3418s | ETA: 18:02:40
+2026-03-12 22:42:27,413 - Train Loss: 2.7988 | Val Loss: 2.9433 | Val Acc: 54.59%
+2026-03-12 23:39:27,139 - Epoch [102/120] Completed in 3417s | ETA: 17:05:12
+2026-03-12 23:39:27,150 - Train Loss: 2.8174 | Val Loss: 2.9209 | Val Acc: 55.02%
+2026-03-13 00:36:29,351 - Epoch [103/120] Completed in 3419s | ETA: 16:08:51
+2026-03-13 00:36:29,460 - Train Loss: 2.7868 | Val Loss: 2.9363 | Val Acc: 54.94%
+2026-03-13 01:33:31,803 - Epoch [104/120] Completed in 3418s | ETA: 15:11:37
+2026-03-13 01:33:31,834 - Train Loss: 2.8287 | Val Loss: 2.9620 | Val Acc: 55.08%
+2026-03-13 02:30:34,133 - Epoch [105/120] Completed in 3419s | ETA: 14:14:51
+2026-03-13 02:30:34,157 - Train Loss: 2.7896 | Val Loss: 2.9275 | Val Acc: 55.08%
+2026-03-13 03:27:37,318 - Epoch [106/120] Completed in 3420s | ETA: 13:18:06
+2026-03-13 03:27:37,360 - Train Loss: 2.7728 | Val Loss: 2.9330 | Val Acc: 55.12%
+2026-03-13 04:24:39,530 - Epoch [107/120] Completed in 3418s | ETA: 12:20:45
+2026-03-13 04:24:39,540 - Train Loss: 2.7787 | Val Loss: 2.9365 | Val Acc: 55.02%
+2026-03-13 05:21:40,244 - Epoch [108/120] Completed in 3418s | ETA: 11:23:38
+2026-03-13 05:21:40,253 - Train Loss: 2.7443 | Val Loss: 2.9508 | Val Acc: 55.18%
+2026-03-13 06:18:40,598 - Epoch [109/120] Completed in 3417s | ETA: 10:26:35
+2026-03-13 06:18:40,613 - Train Loss: 2.7623 | Val Loss: 2.9520 | Val Acc: 54.85%
+2026-03-13 07:15:41,488 - Epoch [110/120] Completed in 3417s | ETA: 9:29:36
+2026-03-13 07:15:41,574 - Train Loss: 2.7811 | Val Loss: 2.9439 | Val Acc: 55.12%
+2026-03-13 08:12:42,116 - Epoch [111/120] Completed in 3416s | ETA: 8:32:28
+2026-03-13 08:12:42,129 - Train Loss: 2.7385 | Val Loss: 2.9456 | Val Acc: 54.93%
+2026-03-13 09:09:41,211 - Epoch [112/120] Completed in 3416s | ETA: 7:35:32
+2026-03-13 09:09:41,224 - Train Loss: 2.7537 | Val Loss: 2.9456 | Val Acc: 54.91%
+2026-03-13 10:06:39,463 - Epoch [113/120] Completed in 3415s | ETA: 6:38:26
+2026-03-13 10:06:39,480 - Train Loss: 2.7413 | Val Loss: 2.9600 | Val Acc: 54.95%
+2026-03-13 11:03:39,346 - Epoch [114/120] Completed in 3416s | ETA: 5:41:41
+2026-03-13 11:03:39,359 - Train Loss: 2.7361 | Val Loss: 2.9484 | Val Acc: 55.13%
+2026-03-13 12:00:37,701 - Epoch [115/120] Completed in 3415s | ETA: 4:44:38
+2026-03-13 12:00:37,713 - Train Loss: 2.7186 | Val Loss: 2.9513 | Val Acc: 55.07%
+2026-03-13 12:57:34,386 - Epoch [116/120] Completed in 3414s | ETA: 3:47:36
+2026-03-13 12:57:34,400 - Train Loss: 2.7412 | Val Loss: 2.9570 | Val Acc: 55.06%
+2026-03-13 13:54:33,470 - Epoch [117/120] Completed in 3415s | ETA: 2:50:47
+2026-03-13 13:54:33,470 - Train Loss: 2.7303 | Val Loss: 2.9650 | Val Acc: 54.93%
+2026-03-13 14:51:33,476 - Epoch [118/120] Completed in 3416s | ETA: 1:53:52
+2026-03-13 14:51:33,499 - Train Loss: 2.7389 | Val Loss: 2.9476 | Val Acc: 55.02%
+2026-03-13 15:48:33,104 - Epoch [119/120] Completed in 3416s | ETA: 0:56:56
+2026-03-13 15:48:33,108 - Train Loss: 2.7346 | Val Loss: 2.9424 | Val Acc: 55.02%
+2026-03-13 16:45:32,606 - Epoch [120/120] Completed in 3416s | ETA: 0:00:00
+2026-03-13 16:45:32,625 - Train Loss: 2.7154 | Val Loss: 2.9443 | Val Acc: 55.12%
+2026-03-13 16:45:36,121 - Training Complete. Total Time: 4 days, 18:12:50. Best Accuracy: 55.29%

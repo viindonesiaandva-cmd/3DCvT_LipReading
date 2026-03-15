@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+
+.venv/
+.vscode/
+.idea/
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+debug/
+debug_imgs/
+hf_release/
+hf_templates/
+
+# Local release helpers
+HUGGINGFACE_RELEASE.md
+prepare_hf_release.sh
+check_env.py
+
+# Model checkpoints and large training weights
+*.pth
+*.pt
+*.ckpt
+
+# Local evaluation exports and preprocessing logs
+per_class_acc_*.csv
+preprocess.log
+preprocess_lrw1000.log
+
+.DS_Store
+Thumbs.db
+
+A_Lip_Reading_Method_Based_on_3D_Convolutional_Vision_Transformer.pdf
